@@ -19,6 +19,7 @@ import java.util.Locale;
 
 /**
  * Created by lenovo on 2016/8/23.
+ * 解析从网上获得的数据
  *将从服务器返回的数据分别存进province,city,county表中
  */
 public class Utility {

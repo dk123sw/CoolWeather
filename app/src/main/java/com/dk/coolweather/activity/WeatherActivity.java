@@ -22,6 +22,7 @@ import com.dk.coolweather.util.Utility;
 
 /**
  * Created by dk on 2016/8/25.
+ * 用于显示天气数据的活动
  */
 public class WeatherActivity extends Activity implements OnClickListener {
     private LinearLayout weatherInfoLayout;
@@ -144,12 +145,13 @@ public class WeatherActivity extends Activity implements OnClickListener {
                         if(array != null && array.length == 2){
                             String weatherCode = array[1];
                             queryWeatherInfo(weatherCode);
+//                            跳转，最后由天气代号查询
                         }
                     }
                 }else if("weatherCode".equals(type)){
 //                    处理服务器返回的天气信息
                     Utility.handleWeatherResponse(WeatherActivity.this ,
-                            response);
+                            response);//储存数据
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

@@ -37,6 +37,7 @@ public class HttpUtil {
                     }
                     if(listener != null) {
 //                        回调onFinish方法
+//                        接口做参数，接口实例调用接口方法，参数可以回调类实现的接口方法
                         listener.onFinish(response.toString());
                     }
                     }catch (Exception e){

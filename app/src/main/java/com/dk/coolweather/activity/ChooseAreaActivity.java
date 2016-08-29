@@ -94,7 +94,7 @@ public class ChooseAreaActivity extends Activity {
         }
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.choose_area);
-        listView =(ListView) findViewById(R.id.list_view);
+        listView = (ListView) findViewById(R.id.list_view);
         titleText = (TextView) findViewById(R.id.title_text);
         adapter = new ArrayAdapter<String>(this , android.R.layout.simple_list_item_1
         ,datalist);
@@ -106,6 +106,7 @@ public class ChooseAreaActivity extends Activity {
 //              i参数判断出用户点击了哪个子项
                 if(currentLevel == LEVEL_PROVINCE){
                     selectedProvince = provinceList.get(i);
+//                    获得想要的省
                     queryCities();
                 }else if(currentLevel ==LEVEL_CITY){
                     selectedCity = cityList.get(i);
